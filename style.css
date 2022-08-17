@@ -1,0 +1,371 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-size: 18;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+   height: 100vh;
+   position: relative;
+}
+
+.title-bar {
+    height: 5vh;
+    background-color: #107C41;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+.menu-bar {
+    height: 5vh;
+    background-color: #107C41;
+    display: flex;
+    
+}
+
+.menu-item {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    
+}
+
+.menu-item:hover {
+    background-color: #0a522a;
+    cursor: pointer;
+}
+
+.menu-item.selected:hover {
+    background-color: #F3F2F1;
+    cursor: default;
+}
+
+.menu-item.selected {
+    background-color: #F3F2F1;
+    color: #107C41;
+}
+
+
+
+.menu-icon-bar {
+   height: 6vh;
+   background-color: #f3f2f1ef;
+   display: flex;
+   align-items: center;
+}
+
+.menu-icon {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon:hover {
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+.font-family-selector {
+    font-size: 18px;
+    width: 150px;
+    font-family: Gill Sans;
+}
+
+.selector {
+    height: 30px;
+}
+
+.font-size-selector {
+    font-size: 18px;
+    width: 50px;
+}
+
+.selector option {
+    font-size: 18px;
+}
+
+.formula-bar {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    background-color: #F3F2F1;
+}
+
+.data-container {
+    height: 74vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.select-all {
+    width: 30px;
+    height: 30px;
+    border: 1px solid lightgray;
+}
+
+.column-name-container {
+    width: calc(100vw - 30px);
+    height: 30px;
+    border: 1px solid lightgray;
+    display: flex;
+    overflow: hidden;
+}
+
+.row-name-container {
+    width: 30px;
+    height: calc(75vh - 30px);
+    border: 1px solid lightgray;
+    overflow: hidden;
+}
+
+.input-cell-container {
+    width: calc(100vw - 30px);
+    height: calc(75vh - 30px);
+    border: 1px solid lightgray;
+    outline-color: #107C41;
+    overflow: scroll;
+}
+
+.sheet-bar {
+    width: 100vw;
+    height: 4vh;
+    background-color: #F3F2F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-left-scroll, .icon-right-scroll {
+    font-size: 50px;
+}
+
+.icon-left-scroll:hover, .icon-right-scroll:hover {
+    background-color: #107C41;
+    cursor: pointer;
+}
+
+.icon-add {
+    color: #107C41;
+    margin-right: 10px;
+}
+
+.icon-add:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.sheet-tab-container {
+    border:1px solid darkgray;
+    width: calc(100vw - 110px);
+    display: flex;
+}
+
+.sheet-tab {
+    
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 80px;
+    text-align: center;
+    justify-content: center;
+    font-weight: 600;
+    border-right: 1px solid darkgray;
+}
+
+.sheet-tab:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.sheet-tab.selected {
+    border-bottom: 4px solid #107C41;
+}
+
+.sheet-tab.selected:hover {
+    cursor: default;
+    background-color: #ffffff;
+}
+
+.sheet-tab-container:hover {
+    cursor: default;
+}
+
+.column-name {
+    min-width: 100px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid lightgrey;
+}
+
+.row-name {
+    min-height: 25px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+
+.cell-row {
+    display: flex;
+}
+
+.input-cell {
+    min-width: 100px;
+    min-height: 25px;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    size: '14px';
+    font-family: 'Gill Sans';
+}
+
+.input-cell.selected {
+    border: 2px solid #107C41;
+}
+
+.formula-editor {
+    height: 70%;
+    border: 1px solid lightgray;
+    background-color: #fff;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    display: flex;
+    align-items: center;
+}
+
+.selected-cell {
+    width: 100px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.function-sign {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formula-input {
+    width: calc(100vw - 160px);
+    outline-color: #107C41;
+}
+
+.menu-icon.selected {
+    background-color: darkgray;
+}
+
+
+.input-cell.top-cell-selected {
+    border-top: none;
+}
+
+.input-cell.bottom-cell-selected {
+    border-bottom: 1px solid lightgray;
+}
+
+.input-cell.right-cell-selected {
+    border-right: 1px solid lightgray;
+}
+
+.input-cell.left-cell-selected {
+    border-left: none;
+}
+
+.color-picker {
+    position: absolute;
+    width: 30px;
+    height: 12px;
+    border: none;
+    padding: 0;
+    top: 30px;
+    left: 8px;
+    cursor: pointer;
+}
+
+.icon-color-fill, .icon-color-text {  
+    padding-top: 0%;
+    position: relative;
+}
+ 
+.sheet-options-modal {
+    position: absolute;
+    bottom: 4vh;
+    background-color: white;
+    height: 60px;
+    width: 70px;
+    box-shadow: 0 0 1px 2px lightgray;
+}
+
+.sheet-rename, .sheet-delete {
+    height: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid lightgray;
+}
+
+.sheet-delete:hover, .sheet-rename:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.sheet-rename-modal {
+    position: absolute;
+    height: 175px;
+    padding-top: 10px;
+    width: 250px;
+    top: calc(100vh / 2 - 50px);
+    left: calc(100vw / 2 - 150px);
+    background-color: white;
+    text-align: center;
+    box-shadow: 0px 0px 3px 1px lightgray;
+}
+
+.modal-title {
+    font-size: 19px;
+}
+.action-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 15px;
+
+}
+
+.new-sheet-name {
+    height: 26px;
+    font-size: 17px;
+    outline-color: #107C41;
+}
+
+.submit-button, .cancel-button {
+    cursor: pointer;
+    background-color: #107C41;
+    color: white;
+    padding: 8px;
+}
+
+.submit-button:hover, .cancel-button:hover{
+    background-color: #0a522a;
+}
