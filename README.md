@@ -13,3 +13,4 @@ Tried to clone the actual Excel and inculcate the complex functionalities.
 <li> Switch to multiple pages without losing the data of previous page
 
 # Screenshot
+![](https://github.com/sag-ar/MS-Excel-Clone/blob/main/Screenshot%202022-08-17%20131035.jpg)
